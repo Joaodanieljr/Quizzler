@@ -1,24 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Quizzler" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background-Bubbles" translatesAutoresizingMaskIntoConstraints="NO" id="HCY-hG-qMO">
+                                <rect key="frame" x="0.0" y="794" width="414" height="102"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="102" id="8U5-wS-0NX"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="MsZ-5i-vsN">
+                                <rect key="frame" x="0.0" y="44" width="414" height="822"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perguntas" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udT-b5-qBh">
+                                        <rect key="frame" x="10" y="0.0" width="394" height="538"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLP-t7-O7E">
+                                        <rect key="frame" x="10" y="578" width="394" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="xfC-S4-Mwn"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Verdadeiro">
+                                            <backgroundConfiguration key="background" strokeWidth="3" strokeOutset="3">
+                                                <color key="strokeColor" red="0.68627450980000004" green="1" blue="0.88344642500000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o2y-jp-V79">
+                                        <rect key="frame" x="10" y="698" width="394" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="V3N-2C-dln"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Falso">
+                                            <backgroundConfiguration key="background" strokeWidth="3" strokeOutset="3">
+                                                <color key="strokeColor" red="0.68627450980000004" green="1" blue="0.88344642500000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <progressView opaque="NO" contentMode="scaleAspectFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="IH7-ge-DDM">
+                                        <rect key="frame" x="10" y="818" width="394" height="4"/>
+                                        <color key="progressTintColor" systemColor="systemPurpleColor"/>
+                                    </progressView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="IH7-ge-DDM" firstAttribute="leading" secondItem="MsZ-5i-vsN" secondAttribute="leading" constant="10" id="Bdd-Sv-RyT"/>
+                                    <constraint firstAttribute="trailing" secondItem="o2y-jp-V79" secondAttribute="trailing" constant="10" id="N9w-T7-dFK"/>
+                                    <constraint firstAttribute="trailing" secondItem="IH7-ge-DDM" secondAttribute="trailing" constant="10" id="OhG-dF-WZn"/>
+                                    <constraint firstItem="udT-b5-qBh" firstAttribute="leading" secondItem="MsZ-5i-vsN" secondAttribute="leading" constant="10" id="ST0-SY-cVD"/>
+                                    <constraint firstItem="o2y-jp-V79" firstAttribute="leading" secondItem="MsZ-5i-vsN" secondAttribute="leading" constant="10" id="jcd-A9-6wU"/>
+                                    <constraint firstItem="CLP-t7-O7E" firstAttribute="leading" secondItem="MsZ-5i-vsN" secondAttribute="leading" constant="10" id="m49-Ez-fTR"/>
+                                    <constraint firstAttribute="trailing" secondItem="udT-b5-qBh" secondAttribute="trailing" constant="10" id="rXg-bn-wvw"/>
+                                    <constraint firstAttribute="trailing" secondItem="CLP-t7-O7E" secondAttribute="trailing" constant="10" id="s60-fX-OL7"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.14509803921568626" green="0.17254901960784313" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="HCY-hG-qMO" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="DF0-9H-2fg"/>
+                            <constraint firstItem="MsZ-5i-vsN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="JDu-iS-304"/>
+                            <constraint firstAttribute="bottom" secondItem="MsZ-5i-vsN" secondAttribute="bottom" constant="30" id="OAh-fC-pj5"/>
+                            <constraint firstItem="MsZ-5i-vsN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SWD-4D-eHl"/>
+                            <constraint firstItem="HCY-hG-qMO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Zmd-4h-Fu9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MsZ-5i-vsN" secondAttribute="trailing" id="jRR-k2-faB"/>
+                            <constraint firstAttribute="bottom" secondItem="HCY-hG-qMO" secondAttribute="bottom" id="wou-yf-zcx"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="15.942028985507248" y="43.526785714285715"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background-Bubbles" width="352" height="102"/>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
