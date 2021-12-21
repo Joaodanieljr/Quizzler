@@ -25,7 +25,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="MsZ-5i-vsN">
                                 <rect key="frame" x="0.0" y="44" width="414" height="822"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perguntas" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udT-b5-qBh">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perguntas" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udT-b5-qBh">
                                         <rect key="frame" x="10" y="0.0" width="394" height="538"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -36,28 +36,26 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="xfC-S4-Mwn"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Verdadeiro">
-                                            <backgroundConfiguration key="background" strokeWidth="3" strokeOutset="3">
-                                                <color key="strokeColor" red="0.68627450980000004" green="1" blue="0.88344642500000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </backgroundConfiguration>
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
-                                        </buttonConfiguration>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Verdadeiro" backgroundImage="Rectangle"/>
+                                        <connections>
+                                            <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oS2-gI-52O"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o2y-jp-V79">
                                         <rect key="frame" x="10" y="698" width="394" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="V3N-2C-dln"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Falso">
-                                            <backgroundConfiguration key="background" strokeWidth="3" strokeOutset="3">
-                                                <color key="strokeColor" red="0.68627450980000004" green="1" blue="0.88344642500000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </backgroundConfiguration>
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
-                                        </buttonConfiguration>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Falso" backgroundImage="Rectangle"/>
+                                        <connections>
+                                            <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uNu-bd-Tn2"/>
+                                        </connections>
                                     </button>
                                     <progressView opaque="NO" contentMode="scaleAspectFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="IH7-ge-DDM">
                                         <rect key="frame" x="10" y="818" width="394" height="4"/>
@@ -88,6 +86,12 @@
                             <constraint firstAttribute="bottom" secondItem="HCY-hG-qMO" secondAttribute="bottom" id="wou-yf-zcx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ProgressTime" destination="IH7-ge-DDM" id="eES-Ee-aGZ"/>
+                        <outlet property="falseButton" destination="o2y-jp-V79" id="ZZf-sW-PdK"/>
+                        <outlet property="questionLabel" destination="udT-b5-qBh" id="pMu-ii-GEY"/>
+                        <outlet property="trueButton" destination="CLP-t7-O7E" id="k5O-dK-w1T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -96,6 +100,7 @@
     </scenes>
     <resources>
         <image name="Background-Bubbles" width="352" height="102"/>
+        <image name="Rectangle" width="322" height="68"/>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
