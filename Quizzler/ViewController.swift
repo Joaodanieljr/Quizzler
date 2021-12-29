@@ -39,9 +39,8 @@ class ViewController: UIViewController {
         let userAnswer = sender.currentTitle
         let actualAnswer = quizQuestions[questionNumber].answer
         
-        if userAnswer == actualAnswer {
-            print("Rigth")
-        }
+        sender.backgroundColor = (userAnswer == actualAnswer) ? UIColor.green: UIColor.red
+        
         
         if questionNumber + 1 < quizQuestions.count{
             questionNumber += 1
@@ -49,11 +48,15 @@ class ViewController: UIViewController {
             questionNumber = 0
         }
         
-        updateUI()
+        Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+        
     }
     
-    func updateUI(){
+    @objc func updateUI(){
         questionLabel.text = quizQuestions[questionNumber].text
+        trueButton.backgroundColor = UIColor.clear
+        falseButton.backgroundColor = UIColor.clear
+        ProgressTime.progress = Float(questionNumber + 1) / Float(quizQuestions.count)
     }
   
 }
