@@ -25,8 +25,17 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="MsZ-5i-vsN">
                                 <rect key="frame" x="0.0" y="44" width="414" height="822"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Score label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kma-qP-W2Y">
+                                        <rect key="frame" x="10" y="0.0" width="394" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="Wom-1j-zge"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perguntas" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udT-b5-qBh">
-                                        <rect key="frame" x="10" y="0.0" width="394" height="538"/>
+                                        <rect key="frame" x="10" y="60" width="394" height="478"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -67,8 +76,10 @@
                                     <constraint firstAttribute="trailing" secondItem="o2y-jp-V79" secondAttribute="trailing" constant="10" id="N9w-T7-dFK"/>
                                     <constraint firstAttribute="trailing" secondItem="IH7-ge-DDM" secondAttribute="trailing" constant="10" id="OhG-dF-WZn"/>
                                     <constraint firstItem="udT-b5-qBh" firstAttribute="leading" secondItem="MsZ-5i-vsN" secondAttribute="leading" constant="10" id="ST0-SY-cVD"/>
+                                    <constraint firstItem="kma-qP-W2Y" firstAttribute="top" secondItem="MsZ-5i-vsN" secondAttribute="top" id="hQs-LP-C0F"/>
                                     <constraint firstItem="o2y-jp-V79" firstAttribute="leading" secondItem="MsZ-5i-vsN" secondAttribute="leading" constant="10" id="jcd-A9-6wU"/>
                                     <constraint firstItem="CLP-t7-O7E" firstAttribute="leading" secondItem="MsZ-5i-vsN" secondAttribute="leading" constant="10" id="m49-Ez-fTR"/>
+                                    <constraint firstItem="kma-qP-W2Y" firstAttribute="leading" secondItem="MsZ-5i-vsN" secondAttribute="leading" constant="10" id="mRf-Sm-bsN"/>
                                     <constraint firstAttribute="trailing" secondItem="udT-b5-qBh" secondAttribute="trailing" constant="10" id="rXg-bn-wvw"/>
                                     <constraint firstAttribute="trailing" secondItem="CLP-t7-O7E" secondAttribute="trailing" constant="10" id="s60-fX-OL7"/>
                                 </constraints>
@@ -90,6 +101,7 @@
                         <outlet property="ProgressTime" destination="IH7-ge-DDM" id="eES-Ee-aGZ"/>
                         <outlet property="falseButton" destination="o2y-jp-V79" id="ZZf-sW-PdK"/>
                         <outlet property="questionLabel" destination="udT-b5-qBh" id="pMu-ii-GEY"/>
+                        <outlet property="scoreLabel" destination="kma-qP-W2Y" id="ZLS-LU-f40"/>
                         <outlet property="trueButton" destination="CLP-t7-O7E" id="k5O-dK-w1T"/>
                     </connections>
                 </viewController>
